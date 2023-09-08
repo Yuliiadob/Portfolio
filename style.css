@@ -1,0 +1,427 @@
+*{
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+*,*:before,*:after{
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   line-height: 1;
+   font-size: 14px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+body{
+background: linear-gradient(to right,pink, white);
+}
+/* HEADER START */
+.header {
+   padding: 20px;
+   margin: 0 auto;
+   max-width: 1200px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.header__logo {
+   color:black;
+   font-family: 'Raleway', sans-serif;
+   font-size: 30px;
+   font-weight: 700;
+   cursor: pointer;
+}
+span{
+   transition: 0.5s;
+}
+.header__logo:hover span{
+   color: violet;
+}
+.header__navigation {
+   /*  display: flex;
+   justify-content: space-between;
+   border: 1px solid #000;
+   width: 400px; */
+}
+/* редагування лише одного елемента 
+.header__navigation-link:nth-child(3) {
+   color: red;
+} */
+.header__navigation-link {
+   margin: 0px 20px;
+   color: black;
+   font-family: 'Raleway', sans-serif;
+   font-size: 16px;
+   font-weight: 700;
+   position: relative;
+   transition: 0.5s;
+}
+.header__navigation-link:hover{
+   color: rgb(255, 138, 157);;
+}
+.header__navigation-link:hover::after{
+   background-color: gray;
+   width: 100%;
+}
+.header__navigation-link::after {
+content: '';
+position: absolute;
+width: 0%;
+height: 20%;
+background-color: transparent;
+right: 0;
+bottom: -15px;
+transition: 0.5s;
+}
+/* .header__navigation-link::before {
+content: '';
+position: absolute;
+width: 10%;
+height: 100%;
+background-color: red;
+left: -10px;
+top: 0;
+transition: 0.5s;
+}
+.header__navigation-link:hover::before{
+   background-color: gray;
+   height: 100%;
+} */
+
+/* HEADER END */
+
+/* CONTENT START */
+.content {
+   margin: 100px auto;
+   max-width: 1200px;
+}
+.info-block {
+   width: 275px;
+   height: 136px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-direction: column;
+}
+.info-block__title {
+   font-style: italic;
+   font-size: 20px;
+   transition: 0.5s;
+}
+.info-block__title:hover{
+   transform: translateX(30px);
+}
+.info-block__title-2 {
+   font-size: 25px;
+}
+.info-block-2__title-2:hover{
+   transform: skewY(20deg);
+
+}
+.info-block__line {
+   border-top: 7px solid  rgb(255, 138, 157);
+   width: 70px;
+   animation: linee 3s linear infinite alternate;
+}
+@keyframes linee{
+   0%{
+   transform: translateX(-100px);
+   }
+   100%{
+   transform: translateX(100px);
+   border-top: 7px solid  rgb(54, 18, 24);
+   }
+}
+/* HEADER END */
+
+/* BENEFITS START*/
+.benefits {
+   margin: 100px auto;
+   max-width: 1200px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   /* animation: benefits 2.5s linear; */
+}
+@keyframes benefits{
+   0%{
+   transform: translateX(2000px);
+   }
+   100%{
+
+   }
+}
+.benefits__item {
+   font-size: 25px;
+   margin: 20px 20px;
+   width: 328px;
+   height: 140px;
+   margin-bottom: 100px;
+   display: flex;
+   padding: 15px;
+   border-radius: 15px;
+   box-shadow: 2px 2px 10px black, inset 0 0 3px black;
+   position: relative;
+  /*  animation: item 2s linear infinite; */
+   /* transform-origin: top; крутиться відносно одної точки */
+}
+@keyframes item{
+   0%{
+   transform: rotate(360deg);
+   }
+   100%{
+
+   }
+}
+.benefits__item::after{
+   position: absolute;
+   content: '';
+   width: 0%;
+   height: 100%;
+   background-color: pink;
+   left: 0;
+   top: 0;
+   border-radius: 15px;
+   transition: 0.6s;
+   z-index: -1;
+}
+.benefits__item:hover::after{
+   width: 100%;
+}
+.benefits__item-box {
+   margin-left: 20px;
+}
+.benefits__item-title{
+   margin-bottom: 20px;
+}
+.benefits__item-description{
+   font-size: 15px;
+}
+.fa-camera {
+   color:  rgb(255, 138, 157);
+   font-size: 30px;
+}
+.fa-earth-americas {
+   color:  rgb(255, 138, 157);
+   font-size: 30px;
+}
+.fa-mug-saucer {
+   color:  rgb(255, 138, 157);
+   font-size: 30px;
+}
+.fa-glasses {
+   color:  rgb(255, 138, 157);
+   font-size: 30px;
+}
+.fa-book-open {
+   color:  rgb(255, 138, 157);
+   font-size: 30px;
+}
+.fa-scale-balanced {
+   color:  rgb(255, 138, 157);
+   font-size: 30px;
+}
+.info-block-2 {
+   width: 275px;
+   height: 136px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-direction: column;
+}
+.info-block-2__title {
+   font-style: italic;
+   font-size: 20px;
+}
+.info-block-2__title-2 {
+   font-size: 25px;
+}
+.info-block-2__line {
+   border-top: 1px solid  rgb(255, 138, 157);
+   width: 70px;
+}
+.info-block-2__description {
+   font-weight: bold;
+   font-size: 15px;
+   margin: 0 auto;
+   margin-top: 10px;
+   font-family: 'Roboto', sans-serif;
+   max-width: 1100px;
+   display: flex;
+   text-align: center;
+}
+
+/* FOOTER START */
+.footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0 auto;
+   max-width: 1100px;
+   flex-wrap: wrap;
+   
+}
+img{
+   width: 350px;
+   height: 440px;
+}
+.photo{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   color: #333;
+   text-align: center;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 400;
+   font-family: 'Montserrat', sans-serif;
+   position: relative;
+   overflow: hidden;
+}
+.photo:hover .photo__block{
+   left: 0;
+}
+.photo__title{
+   display: flex;
+   text-align: center;
+   justify-content: center;
+   margin: 20px auto;
+}
+.photo__block {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   left: -500px;
+   top: 0;
+   transition: 0.5s;
+   display: flex;
+   background-color: #ffffffda;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+}
+.photo__block-title {
+   font-size: 30px;
+   font-weight: bold;
+   font-family: 'Montserrat', sans-serif;
+}
+
+.photo__desc{
+   font-size: 18px;
+}
+.photo__block-img {
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+}
+.photo__block-btn {
+   font-style: italic;
+   font-weight: bold;
+   font-size: 15px;
+   border: 1px solid #eee2e200;
+   border-radius: 100%;
+   width: 55px;
+   height: 45px;
+   background-color: white;
+   transition: 0.5s;
+}
+.photo__block-btn:hover{
+   background-color: violet;
+   font-size: 20px;
+   transform: scale(1.5);
+}
+
+.music {
+   width: 100px;
+   height: 80px;
+   border-radius: 0 20px 20px 0;
+   background-color: violet ;
+   position: fixed;
+   top: 20%;
+   left: 0;
+   overflow: hidden;
+   transition: 0.8s;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+}
+
+.music__btn{
+   margin-left: 20px;
+}
+.music:hover{
+   width: 250px;
+}
+.video{
+   display: flex;
+   max-width: 700px;
+   justify-content: space-around;
+   align-items: center;
+   margin: 0 auto;
+   margin-top: 20px;
+   transition: 0.5s;
+}
+.video:hover{
+   transform: rotate(-20deg);
+}
+
+/* Стилі для дуже великих екранів (дисплей 1200рх і більше).
+Записуються без медіа-запитів, тому що контрольна точка не має верхньої межі. */
+
+/* Стилі для великих екранів (дисплей максимум 1199рх) */
+@media (max-width: 1199px) { 
+.benefits{
+   max-width: 1000px;
+   background-color: rgb(119, 65, 113));
+}
+}
+
+/* Стилі для середніх екранів (дисплей максимум 991рх) */
+   @media (max-width: 991px) {
+   .benefits__item{
+      margin: 20px auto;
+   }
+   .photo{
+      margin: 20px auto ;
+   }
+   .
+   }
+
+/* Стилі для малих екранів (дисплей максимум 767рх) */
+   @media (max-width: 767px) { 
+      .header__navigation-link{
+   display: none;
+      }
+      .info-block-2__description{
+   padding: 0 20px;
+      }
+   }
+
+/* Стилі для дуже малих екранів (дисплей максимум 575рх) */
+   @media (max-width: 575px) { ... }
