@@ -508,13 +508,9 @@ margin: 40px 40px;
    .footer__butt{
       width: 150px;
    }
-   .video{
-      display: flex;
-      max-width: 700px;
-      justify-content: space-around;
-      align-items: center;
-      margin: 0 auto;
-      margin-top: 20px;
+   .video__frame{
+      width: 400px;
+      height: 300px;
    }
    }
 
@@ -574,5 +570,9 @@ margin: 40px 40px;
    }
    .music__btn{
       height: 20px;
+   }
+   .video__frame{
+      width: 400px;
+      height: 300px;
    }
 }
