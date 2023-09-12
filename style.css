@@ -508,9 +508,17 @@ margin: 40px 40px;
    .footer__butt{
       width: 150px;
    }
-   .video__frame{
-      width: 400px;
-      height: 300px;
+   .video{
+      display: flex;
+      max-width: 700px;
+      justify-content: space-around;
+      align-items: center;
+      margin: 0 auto;
+      margin-top: 20px;
+      transition: 0.5s;
+   }
+   .video:hover{
+      transform: rotate(-10deg);
    }
    }
 
