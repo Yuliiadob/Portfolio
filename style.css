@@ -499,6 +499,19 @@ margin: 40px 40px;
 .music__btn{
    height: 25px;
 }
+.footer__form{
+   margin: 40px 40px;
+   }
+   .form__input {
+      width: 150px;
+   }
+   .footer__butt{
+      width: 150px;
+
+   .text__email{
+         font-size: 12px;
+         background-color: transparent; 
+      }
    }
 
 /* Стилі для дуже малих екранів (дисплей максимум 575рх) */
